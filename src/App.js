@@ -13,8 +13,7 @@ function App() {
   const [error, setError] = useState(null);
   const [city, setCity] = useState('London');
 
-  const API_KEY = 'ba5af5a1b59df55b4487d20896421cb9';
-
+  const API_KEY = process.env.REACT_APP_API_KEY;
   useEffect(() => {
     fetchWeatherData();
   }, [city]);
